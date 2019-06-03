@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="center" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.korchinskiy.client.Controller">
+    <HBox>
+        <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+            <Label text="Cloud" />
+            <ListView fx:id="cloudListView" onMouseClicked="#clearLocalSelected" VBox.vgrow="ALWAYS" />
+        </VBox>
+        <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+            <Label text="LocalHost" />
+            <ListView fx:id="localListView" onMouseClicked="#clearCloudSelected" VBox.vgrow="ALWAYS" />
+        </VBox>
+    </HBox>
+    <Label fx:id="infoLabel">
+      <VBox.margin>
+         <Insets bottom="10.0" top="10.0" />
+      </VBox.margin></Label>
+    <ProgressBar fx:id="progressBar">
+      <VBox.margin>
+         <Insets bottom="10.0" />
+      </VBox.margin></ProgressBar>
+    <HBox alignment="CENTER">
+        <Button maxWidth="Infinity" onAction="#requestFile" text="Send to Local" HBox.hgrow="ALWAYS" />
+        <Button maxWidth="Infinity" onAction="#requestDelete" text="Delete" HBox.hgrow="ALWAYS" />
+        <Button maxWidth="Infinity" onAction="#renameCloudFile" text="Rename" HBox.hgrow="ALWAYS" />
+        <Button maxWidth="Infinity" onAction="#sendFileToServer" text="Send to Cloud" HBox.hgrow="ALWAYS" />
+        <Button maxWidth="Infinity" onAction="#deleteLocalFile" text="Delete" HBox.hgrow="ALWAYS" />
+        <Button maxWidth="Infinity" onAction="#renameLocalFile" text="Rename" HBox.hgrow="ALWAYS" />
+    </HBox>
+
+</VBox>

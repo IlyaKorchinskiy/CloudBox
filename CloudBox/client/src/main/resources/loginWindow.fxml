@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ru.korchinskiy.client.LoginController">
+    <HBox alignment="CENTER">
+        <Label prefWidth="80" text="Login"/>
+        <TextField fx:id="loginField"/>
+    </HBox>
+    <HBox alignment="CENTER">
+        <Label prefWidth="80" text="Password"/>
+        <TextField fx:id="passField" onKeyPressed="#onEnterPressed"/>
+    </HBox>
+    <HBox alignment="CENTER">
+        <Label fx:id="infoLabel"/>
+        <VBox.margin>
+            <Insets top="20.0"/>
+        </VBox.margin>
+    </HBox>
+    <HBox alignment="CENTER">
+        <Button onAction="#register" prefHeight="25.0" prefWidth="90.0" text="Register" HBox.hgrow="ALWAYS">
+            <HBox.margin>
+                <Insets right="50.0"/>
+            </HBox.margin>
+        </Button>
+        <Button onAction="#signIn" prefHeight="25.0" prefWidth="90.0" text="Sign in"/>
+        <VBox.margin>
+            <Insets top="20.0"/>
+        </VBox.margin>
+    </HBox>
+
+</VBox>
